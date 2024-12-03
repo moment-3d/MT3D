@@ -123,42 +123,51 @@
   </div>
 </section>
 
+<style>
+  .gif-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
+    gap: 15px; /* Space between images */
+    justify-items: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+  }
+  .gif-gallery img {
+    max-width: 100%; /* Ensure the images do not exceed the container's width */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #ddd; /* Add a subtle border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
+  }
+</style>
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <div class="gif-gallery">
-        <img src="./static/project_page/6f09fdd4-6ce9-43b8-a141-da7efef0c6f5-ezgif.com-crop.gif" alt="GIF 1">
-        <img src="./static/project_page/69b118fe-7114-4c45-a83b-6eb3277d3f76-ezgif.com-crop.gif" alt="GIF 2">
-        <img src="./static/project_page/c97a9385-c5b4-4c65-a7fc-9136a610425c-ezgif.com-crop.gif" alt="GIF 3">
-        <img src="./static/project_page/e65740b1-60cc-4ec5-868e-8f5b04692c7d-ezgif.com-crop.gif" alt="GIF 4">
-        <img src="./static/project_page/eval_spiral_14500_20c890b598c7da6eb563.gif" alt="GIF 5">
-        <img src="./static/project_page/eval_spiral_14500_35c8231eb52f65fea055-ezgif.com-crop.gif" alt="GIF 6">
-        <img src="./static/project_page/eval_spiral_14500_595dbf5ee1aa5e72363b-ezgif.com-crop.gif" alt="GIF 7">
-        <img src="./static\project_page\eval_spiral_14500_a84dd6aef71d99883400.gif" alt="GIF 8">
-        <img src="./static\project_page\eval_spiral_14500_b6d8871aaa6cccad8d40-ezgif.com-crop.gif" alt="GIF 9">
-        <img src="./static/project_page/f6a01576-bd47-4c3a-9414-f461cce5f3b8-ezgif.com-crop.gif" alt="GIF 10">
-        <img src="./static/project_page/mt_parrot.gif" alt="GIF 11">
+      <div class="image-gallery">
+        <img src="./static/project_page/main_fog@500x.png" alt="Main Image" class="responsive-image">
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  .gif-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
-    justify-items: center;
-    align-items: center;
+  .image-gallery {
+    display: flex; /* Flexible layout for single or multiple images */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    padding: 15px; /* Add padding around the image */
   }
-  .gif-gallery img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  .responsive-image {
+    max-width: 100%; /* Make sure the image fits within its container */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #ddd; /* Optional: Add a subtle border */
+    border-radius: 5px; /* Optional: Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
   }
 </style>
+
+
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -174,6 +183,128 @@
       </div>
     </div>
     <!--/ Abstract. -->
+  
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <div class="gif-gallery">
+            <img src="./static/project_page/c97a9385-c5b4-4c65-a7fc-9136a610425c-ezgif.com-crop.gif" alt="GIF 3">
+            <img src="./static/project_page/f6a01576-bd47-4c3a-9414-f461cce5f3b8-ezgif.com-crop.gif" alt="GIF 10">
+            <img src="./static/project_page/mt_parrot.gif" alt="GIF 11">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!--motivation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Motivation</h2>
+        <div class="content has-text-justified">
+          <p>Text-to-3D generation faces major obstacles due to the lack of large-scale text-annotated 3D
+            datasets. To overcome this, 2D lifting techniques have emerged as a promising approach. These
+            methods leverage pre-trained text-to-image diffusion models and use score distillation sampling
+            (SDS) to refine 3D models from textual inputs. Unlike traditional 3D supervised methods, SDS
+            utilizes the extensive knowledge embedded in pre-trained text-to-image models. This approach
+            bypasses the constraints of dataset scarcity and enhances the ability to generate innovative and
+            previously unseen content.</p>
+            <section class="hero teaser">
+              <div class="container is-max-desktop">
+                <div class="hero-body">
+                  <div class="image-gallery">
+                    <img src="./static/project_page/janus@500x.png" alt="Main Image" class="responsive-image">
+                  </div>
+                </div>
+              </div>
+            </section>
+          <p>However, commonly used 2D lifting techniques often suffer from geometric inconsistencies,
+            such as the multi-faced Janus problem, vividly illustrated in Figure ?? (a). This issue primarily
+            stems from the inherent viewpoint biases in 2D diffusion models trained on extensive internetscale
+            datasets, as demonstrated in Figure ?? (b). These biases predispose the generated 3D
+            models to overfit, typically manifesting as repetitive frontal views and other geometric
+            distortions.</p>
+    <p>In this paper, we introduce MT3D, a novel moment-based text-to-3D generative model. MT3D is
+      a 2D lifting technique designed to generate high-quality, geometrically consistent objects by
+      learning geometry from a high-fidelity 3D object. Traditional 2D lifting techniques uniformly
+      sample images from a 3D representation and subsequently align them with the high-probability
+      images produced by the frozen diffusion model. Our objective is to reduce inherent viewpoint
+      bias and incorporate 3D geometric understanding into our generation pipeline.</p>
+        </div>
+      </div>
+    </div>
+    <!--/ motivation. -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!--method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <section class="hero teaser">
+            <div class="container is-max-desktop">
+              <div class="hero-body">
+                <div class="image-gallery">
+                  <img src="./static/project_page/controlnet_viewpoint_1.png" alt="Main Image" class="responsive-image">
+                </div>
+              </div>
+            </div>
+          </section>
+          <p>Firstly, we utilize ControlNet to address viewpoint bias in diffusion models. ControlNet produces
+            images based on its control signals. As depicted in Figure ??, images generated by ControlNet,
+            when conditioned on various depth maps, demonstrate its ability to produce images from
+            multiple viewpoints, thereby reducing viewpoint bias. In this paper, for each view sampled from
+            the 3D representation, we render its corresponding view from a high-fidelity 3D reference object.
+            We then extract a depth map from this rendered view, which serves as the control signal for the
+            diffusion model.</p>
+          <p>ControlNet mitigates viewpoint bias to a certain extent, but it performs poorly on views that are
+            significantly scarce in the training dataset. For example, as shown in Figure ??, ControlNet
+            generates a poor-quality image when conditioned on a depth map of a more challenging bottom
+            view. In this paper, we employ deep geometric moments (DGM) to explicitly infuse the
+            geometric properties of a reference 3D asset into the generated 3D representation, ensuring that
+            even underrepresented views exhibit coherent geometry. Geometric moments define various
+            shape characteristics and can be visualized as projections of the image onto chosen basis
+            functions. The DGM is inspired by traditional moment calculations, with the significant difference that its basis functions are learned end-to-end through deep learning.</p>
+        </div>
+      </div>
+    </div>
+    <!--/ method. -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!--results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <section class="hero teaser">
+            <div class="container is-max-desktop">
+              <div class="hero-body">
+                <div class="gif-gallery">
+                  <img src="./static/project_page/6f09fdd4-6ce9-43b8-a141-da7efef0c6f5-ezgif.com-crop.gif" alt="GIF 1">
+                  <img src="./static/project_page/69b118fe-7114-4c45-a83b-6eb3277d3f76-ezgif.com-crop.gif" alt="GIF 2">
+                  <img src="./static/project_page/c97a9385-c5b4-4c65-a7fc-9136a610425c-ezgif.com-crop.gif" alt="GIF 3">
+                  <img src="./static/project_page/e65740b1-60cc-4ec5-868e-8f5b04692c7d-ezgif.com-crop.gif" alt="GIF 4">
+                  <img src="./static/project_page/eval_spiral_14500_20c890b598c7da6eb563.gif" alt="GIF 5">
+                  <img src="./static/project_page/eval_spiral_14500_35c8231eb52f65fea055-ezgif.com-crop.gif" alt="GIF 6">
+                  <img src="./static/project_page/eval_spiral_14500_595dbf5ee1aa5e72363b-ezgif.com-crop.gif" alt="GIF 7">
+                  <img src="./static\project_page\eval_spiral_14500_a84dd6aef71d99883400.gif" alt="GIF 8">
+                  <img src="./static\project_page\eval_spiral_14500_b6d8871aaa6cccad8d40-ezgif.com-crop.gif" alt="GIF 9">
+                  <img src="./static/project_page/f6a01576-bd47-4c3a-9414-f461cce5f3b8-ezgif.com-crop.gif" alt="GIF 10">
+                  <img src="./static/project_page/mt_parrot.gif" alt="GIF 11">
+                  <img src="./static/project_page\eval_spiral_14500_20c890b598c7da6eb563-ezgif.com-crop.gif" alt="GIF 11">
+                </div>
+              </div>
+            </div>
+          </section>
+          
+        </div>
+      </div>
+    </div>
+    <!--/ results. -->
 
 
 
