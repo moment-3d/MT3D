@@ -1,357 +1,445 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="description"
-        content="Deep Geometric moments promotes shape consistency in Text-to-3D generation">
-  <meta name="keywords" content="MT3D">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Deep Geometric moments promotes shape consistency in Text-to-3D generation</title>
+	<meta charset="utf-8">
+	<meta name="description"
+				content="Deep Geometric moments promotes shape consistency in Text-to-3D generation">
+	<meta name="keywords" content="MT3D">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Deep Geometric moments promotes shape consistency in Text-to-3D generation</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
+		function gtag() {
+			dataLayer.push(arguments);
+		}
 
-    gtag('js', new Date());
+		gtag('js', new Date());
 
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
+		gtag('config', 'G-PYVRSFMDRL');
+	</script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+				rel="stylesheet">
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+	<link rel="stylesheet" href="./static/css/bulma.min.css">
+	<link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+	<link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+	<link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+	<link rel="stylesheet"
+				href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+	<link rel="stylesheet" href="./static/css/index.css">
+	<link rel="icon" href="./static/images/favicon.svg">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script defer src="./static/js/fontawesome.all.min.js"></script>
+	<script src="./static/js/bulma-carousel.min.js"></script>
+	<script src="./static/js/bulma-slider.min.js"></script>
+	<script src="./static/js/index.js"></script>
 </head>
 <body>
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
+	<div class="navbar-brand">
+		<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div>
 
 </nav>
 
 
 <section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Deep Geometric moments promotes shape consistency in Text-to-3D generation</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="">Utkarsh Nath</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="">Rajeev Goel</a><sup>1</sup>,</span>
-              <span class="author-block">
-                <a href="">Eunsoom Jeon</a><sup>2</sup>,
-              </span>
-            <span class="author-block">
-              <a href="">Changhoon Kim</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="">Kyle Min</a><sup>3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="">Yezhou Yang</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="">Yingzhen Yang</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="">Pavan Turaga</a><sup>1</sup>
-            </span>
-          </div>
+	<div class="hero-body">
+		<div class="container is-max-desktop">
+			<div class="columns is-centered">
+				<div class="column has-text-centered">
+					<h1 class="title is-1 publication-title">Deep Geometric moments promote shape consistency in Text-to-3D generation</h1>
+					<div class="is-size-5 publication-authors">
+						<span class="author-block">
+							<span>Utkarsh Nath</span><sup>1</sup>,
+						</span>
+						<span class="author-block">
+							<span>Rajeev Goel</span><sup>1</sup>,
+						</span>
+						<span class="author-block">
+							<span>Eunsoom Jeon</span><sup>2</sup>,
+						</span>
+						<span class="author-block">
+							<span>Changhoon Kim</span><sup>1</sup>,
+						</span>
+						<span class="author-block">
+							<span>Kyle Min</span><sup>3</sup>,
+						</span>
+						<span class="author-block">
+							<span>Yezhou Yang</span><sup>1</sup>,
+						</span>
+						<span class="author-block">
+							<span>Yingzhen Yang</span><sup>1</sup>,
+						</span>
+						<span class="author-block">
+							<span>Pavan Turaga</span><sup>1</sup>
+						</span>
+					</div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Arizona State University,</span>
-            <span class="author-block"><sup>2</sup>Seoul National University of Science and Technology,</span>
-            <span class="author-block"><sup>3</sup>Intel Labs</span>
-          </div>
+					<div class="is-size-5 publication-authors">
+						<span class="author-block"><sup>1</sup>Arizona State University,</span>
+						<span class="author-block"><sup>2</sup>Seoul National University of Science and Technology,</span>
+						<span class="author-block"><sup>3</sup>Intel Labs</span>
+					</div>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
+					<div class="column has-text-centered">
+						<div class="publication-links">
+							<!-- PDF Link. -->
+							<span class="link-block">
+								<a href="https://arxiv.org/pdf/2408.05938"
+									 class="external-link button is-normal is-rounded is-dark">
+									<span class="icon">
+											<i class="fas fa-file-pdf"></i>
+									</span>
+									<span>Paper</span>
+								</a>
+							</span>
 
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/utkarshnath/MT3D"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-            </div>
+							<!-- Code Link. -->
+							<span class="link-block">
+								<a href="https://github.com/utkarshnath/MT3D"
+									 class="external-link button is-normal is-rounded is-dark">
+									<span class="icon">
+											<i class="fab fa-github"></i>
+									</span>
+									<span>Code</span>
+									</a>
+							</span>
+						</div>
 
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
 <style>
-  .gif-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
-    gap: 15px; /* Space between images */
-    justify-items: center; /* Center images horizontally */
-    align-items: center; /* Center images vertically */
-  }
-  .gif-gallery img {
-    max-width: 100%; /* Ensure the images do not exceed the container's width */
-    height: auto; /* Maintain aspect ratio */
-    border: 2px solid #ddd; /* Add a subtle border */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
-  }
+	.image-gallery {
+		display: flex; /* Flexible layout for single or multiple images */
+		justify-content: center; /* Center the image horizontally */
+		align-items: center; /* Center the image vertically */
+		padding: 15px; /* Add padding around the image */
+	}
+
+	.responsive-image {
+		max-width: 100%; /* Make sure the image fits within its container */
+		height: auto; /* Maintain aspect ratio */
+		border: 2px solid #ddd; /* Optional: Add a subtle border */
+		border-radius: 5px; /* Optional: Rounded corners */
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
+	}
+
+	figcaption {
+		font-size: 14px;
+		color: #555;
+		text-align: center;
+		word-wrap: break-word;
+		max-width: 100%; /* Ensures caption stays within the container */
+	}
 </style>
 
 <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <div class="image-gallery">
-        <img src="./static/project_page/main_fog@500x.png" alt="Main Image" class="responsive-image">
-      </div>
-    </div>
-  </div>
+	<div class="container is-max-desktop">
+		<div class="hero-body">
+			<div class="gif-gallery">
+				<figure>
+					<img src="./static/project_page/c97a9385-c5b4-4c65-a7fc-9136a610425c-ezgif.com-crop.gif" alt="GIF 3">
+					<figcaption>A high quality photo of a corgi wearing a top hat</figcaption>
+				</figure>
+				<figure>
+					<img src="./static/project_page/f6a01576-bd47-4c3a-9414-f461cce5f3b8-ezgif.com-crop.gif" alt="GIF 10">
+					<figcaption>A DSLR photo of a ceramic lion</figcaption>
+				</figure>
+				<figure>
+					<img src="./static/project_page/mt_parrot.gif" alt="GIF 11">
+					<figcaption>A high quality photo of a parrot</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
 </section>
 
-<style>
-  .image-gallery {
-    display: flex; /* Flexible layout for single or multiple images */
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
-    padding: 15px; /* Add padding around the image */
-  }
+<section class="section">
+	<div class="container is-max-desktop">
+		<!-- Abstract. -->
+		<div class="columns is-centered has-text-centered">
+			<div class="column is-four-fifths">
+				<h2 class="title is-3">Abstract</h2>
+				<div class="content has-text-justified">
+					<p>
+						To address the data scarcity associated with 3D assets, 2D-lifting techniques such as Score Distillation Sampling (SDS) have become a widely adopted practice in text-to-3D generation pipelines. However, the diffusion models used in these techniques are prone to viewpoint bias and thus lead to geometric inconsistencies such as the Janus problem. To counter this, we introduce MT3D, a text-to-3D generative model that leverages a high-fidelity 3D object to overcome viewpoint bias and explicitly infuse geometric understanding into the generation pipeline. Firstly, we employ depth maps derived from a high-quality 3D model as control signals to guarantee that the generated 2D images preserve the fundamental shape and structure, thereby reducing the inherent viewpoint bias. Next, we utilize deep geometric moments to ensure geometric consistency in the 3D representation explicitly. By incorporating geometric details from a 3D asset, MT3D enables the creation of diverse and geometrically consistent objects, thereby improving the quality and usability of our 3D representations.
+					</p>
+				</div>
+			</div>
+		</div>
+		<!--/ Abstract. -->
 
-  .responsive-image {
-    max-width: 100%; /* Make sure the image fits within its container */
-    height: auto; /* Maintain aspect ratio */
-    border: 2px solid #ddd; /* Optional: Add a subtle border */
-    border-radius: 5px; /* Optional: Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
-  }
-</style>
-
+<section class="section">
+	<div class="container is-max-desktop">
+		<!--motivation. -->
+		<div class="columns is-centered has-text-centered">
+			<div class="column is-four-fifths">
+				<h2 class="title is-3">Motivation</h2>
+				<div class="content has-text-justified">
+					<p>Text-to-3D generation faces major obstacles due to the lack of large-scale text-annotated 3D
+						datasets. To overcome this, 2D lifting techniques have emerged as a promising approach. These
+						methods leverage pre-trained text-to-image diffusion models and use score distillation sampling
+						(SDS) to refine 3D models from textual inputs. Unlike traditional 3D supervised methods, SDS
+						utilizes the extensive knowledge embedded in pre-trained text-to-image models. This approach
+						bypasses the constraints of dataset scarcity and enhances the ability to generate innovative and
+						previously unseen content.</p>
+						<section class="hero teaser">
+							<div class="container is-max-desktop">
+								<div class="hero-body">
+									<div class="image-gallery">
+										<figure style="text-align: center; max-width: 100%; margin: auto;">
+											<img src="./static/project_page/janus@500x.png" alt="Main Image" class="responsive-image">
+											<figcaption style="margin-top: 10px; font-size: 16px; color: #555; text-align: center; word-wrap: break-word;">
+												Figure 1: (a) An illustration of the multi-faced Janus problem. (b) An illustration of the inherent viewpoint bias in diffusion models. We present samples generated by Stable Diffusion v1.5 from the prompt 'cat,' where most samples predominantly depict the cat from a front view.
+											</figcaption>
+										</figure>
+									</div>
+								</div>
+							</div>
+						</section>
+					<p>However, commonly used 2D lifting techniques often suffer from geometric inconsistencies,
+						such as the multi-faced Janus problem, vividly illustrated in Figure 1(a). This issue primarily
+						stems from the inherent viewpoint biases in 2D diffusion models trained on extensive internetscale
+						datasets, as demonstrated in Figure 1(b). These biases predispose the generated 3D
+						models to overfit, typically manifesting as repetitive frontal views and other geometric
+						distortions.</p>
+		<p>In this paper, we introduce MT3D, a novel moment-based text-to-3D generative model. MT3D is
+			a 2D lifting technique designed to generate high-quality, geometrically consistent objects by
+			learning geometry from a high-fidelity 3D object. Traditional 2D lifting techniques uniformly
+			sample images from a 3D representation and subsequently align them with the high-probability
+			images produced by the frozen diffusion model. Our objective is to reduce inherent viewpoint
+			bias and incorporate 3D geometric understanding into our generation pipeline.</p>
+				</div>
+			</div>
+		</div>
+		<!--/ motivation. -->
 
 
 <section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            To address the data scarcity associated with 3D assets, 2D-lifting techniques such as Score Distillation Sampling (SDS) have become a widely adopted practice in text-to-3D generation pipelines. However, the diffusion models used in these techniques are prone to viewpoint bias and thus lead to geometric inconsistencies such as the Janus problem. To counter this, we introduce MT3D, a text-to-3D generative model that leverages a high-fidelity 3D object to overcome viewpoint bias and explicitly infuse geometric understanding into the generation pipeline. Firstly, we employ depth maps derived from a high-quality 3D model as control signals to guarantee that the generated 2D images preserve the fundamental shape and structure, thereby reducing the inherent viewpoint bias. Next, we utilize deep geometric moments to ensure geometric consistency in the 3D representation explicitly. By incorporating geometric details from a 3D asset, MT3D enables the creation of diverse and geometrically consistent objects, thereby improving the quality and usability of our 3D representations.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-  
-    <section class="hero teaser">
-      <div class="container is-max-desktop">
-        <div class="hero-body">
-          <div class="gif-gallery">
-            <img src="./static/project_page/c97a9385-c5b4-4c65-a7fc-9136a610425c-ezgif.com-crop.gif" alt="GIF 3">
-            <img src="./static/project_page/f6a01576-bd47-4c3a-9414-f461cce5f3b8-ezgif.com-crop.gif" alt="GIF 10">
-            <img src="./static/project_page/mt_parrot.gif" alt="GIF 11">
-          </div>
-        </div>
-      </div>
-    </section>
-    
+	<div class="container is-max-desktop">
+		<!--method. -->
+		<div class="columns is-centered has-text-centered">
+			<div class="column is-four-fifths">
+				<h2 class="title is-3">Method</h2>
+				<div class="content has-text-justified">
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!--motivation. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Motivation</h2>
-        <div class="content has-text-justified">
-          <p>Text-to-3D generation faces major obstacles due to the lack of large-scale text-annotated 3D
-            datasets. To overcome this, 2D lifting techniques have emerged as a promising approach. These
-            methods leverage pre-trained text-to-image diffusion models and use score distillation sampling
-            (SDS) to refine 3D models from textual inputs. Unlike traditional 3D supervised methods, SDS
-            utilizes the extensive knowledge embedded in pre-trained text-to-image models. This approach
-            bypasses the constraints of dataset scarcity and enhances the ability to generate innovative and
-            previously unseen content.</p>
-            <section class="hero teaser">
-              <div class="container is-max-desktop">
-                <div class="hero-body">
-                  <div class="image-gallery">
-                    <img src="./static/project_page/janus@500x.png" alt="Main Image" class="responsive-image">
-                  </div>
-                </div>
-              </div>
-            </section>
-          <p>However, commonly used 2D lifting techniques often suffer from geometric inconsistencies,
-            such as the multi-faced Janus problem, vividly illustrated in Figure ?? (a). This issue primarily
-            stems from the inherent viewpoint biases in 2D diffusion models trained on extensive internetscale
-            datasets, as demonstrated in Figure ?? (b). These biases predispose the generated 3D
-            models to overfit, typically manifesting as repetitive frontal views and other geometric
-            distortions.</p>
-    <p>In this paper, we introduce MT3D, a novel moment-based text-to-3D generative model. MT3D is
-      a 2D lifting technique designed to generate high-quality, geometrically consistent objects by
-      learning geometry from a high-fidelity 3D object. Traditional 2D lifting techniques uniformly
-      sample images from a 3D representation and subsequently align them with the high-probability
-      images produced by the frozen diffusion model. Our objective is to reduce inherent viewpoint
-      bias and incorporate 3D geometric understanding into our generation pipeline.</p>
-        </div>
-      </div>
-    </div>
-    <!--/ motivation. -->
+					<section class="hero teaser">
+						<div class="container is-max-desktop">
+							<div class="hero-body">
+								<div class="image-gallery">
+									<figure style="text-align: center; max-width: 100%; margin: auto;">
+										<img src="./static/project_page/main_fog@500x.png" alt="Main Image" class="responsive-image">
+										<figcaption style="margin-top: 10px; font-size: 16px; color: #555; text-align: center; word-wrap: break-word;">
+											Figure 2: Overview of MT3D. In the first stage, we optimize 3D Gaussians using a high-fidelity 3D object with depth-conditioned ControlNet and deep geometric moments (DGM). Red and green locks represent frozen and trainable weights, respectively. The second stage extends the first by not only utilizing ControlNet and DGM features but also applying additional densification and pruning.
+											</figcaption>
+									</figure>
+								</div>
+							</div>
+						</div>
+					</section>
+					<p>Firstly, we utilize ControlNet to address viewpoint bias in diffusion models. ControlNet produces
+						images based on its control signals. As depicted in Figure 3, images generated by ControlNet,
+						when conditioned on various depth maps, demonstrate its ability to produce images from
+						multiple viewpoints, thereby reducing viewpoint bias. In this paper, for each view sampled from
+						the 3D representation, we render its corresponding view from a high-fidelity 3D reference object.
+						We then extract a depth map from this rendered view, which serves as the control signal for the
+						diffusion model.</p>
+						<section class="hero teaser">
+							<div class="container is-max-desktop">
+								<div class="hero-body">
+									<div class="image-gallery">
+										<figure style="text-align: center; max-width: 100%; margin: auto;">
+											<img src="./static/project_page/controlnet_viewpoint_1.png" alt="Main Image" class="responsive-image">
+											<figcaption style="margin-top: 10px; font-size: 16px; color: #555; text-align: center; word-wrap: break-word;">
+												Figure 3: (<em>Left</em>) Samples generated by the depth-conditioned ControlNet model from the prompt
+												<code>Elephant</code>, conditioned on various viewpoints. The outputs from the ControlNet model align well
+												with the majority of the input-conditioned depth maps. (<em>Right</em>) Illustration of features obtained
+												from the ImageNet-pretrained deep geometric moment Model (DGM) across various images. DGM features effectively
+												capture the shape and structure.
+											</figcaption>
+										</figure>
+									</div>
+								</div>
+							</div>
+						</section>
+					<p>ControlNet mitigates viewpoint bias to a certain extent, but it performs poorly on views that are
+						significantly scarce in the training dataset. For example, as shown in Figure 3, ControlNet
+						generates a poor-quality image when conditioned on a depth map of a more challenging bottom
+						view. In this paper, we employ deep geometric moments (DGM) to explicitly infuse the
+						geometric properties of a reference 3D asset into the generated 3D representation, ensuring that
+						even underrepresented views exhibit coherent geometry. Geometric moments define various
+						shape characteristics and can be visualized as projections of the image onto chosen basis
+						functions. The DGM is inspired by traditional moment calculations, with the significant difference that its basis functions are learned end-to-end through deep learning.</p>
+				</div>
+			</div>
+		</div>
+		<!--/ method. -->
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!--method. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Method</h2>
-        <div class="content has-text-justified">
-          <section class="hero teaser">
-            <div class="container is-max-desktop">
-              <div class="hero-body">
-                <div class="image-gallery">
-                  <img src="./static/project_page/controlnet_viewpoint_1.png" alt="Main Image" class="responsive-image">
-                </div>
-              </div>
-            </div>
-          </section>
-          <p>Firstly, we utilize ControlNet to address viewpoint bias in diffusion models. ControlNet produces
-            images based on its control signals. As depicted in Figure ??, images generated by ControlNet,
-            when conditioned on various depth maps, demonstrate its ability to produce images from
-            multiple viewpoints, thereby reducing viewpoint bias. In this paper, for each view sampled from
-            the 3D representation, we render its corresponding view from a high-fidelity 3D reference object.
-            We then extract a depth map from this rendered view, which serves as the control signal for the
-            diffusion model.</p>
-          <p>ControlNet mitigates viewpoint bias to a certain extent, but it performs poorly on views that are
-            significantly scarce in the training dataset. For example, as shown in Figure ??, ControlNet
-            generates a poor-quality image when conditioned on a depth map of a more challenging bottom
-            view. In this paper, we employ deep geometric moments (DGM) to explicitly infuse the
-            geometric properties of a reference 3D asset into the generated 3D representation, ensuring that
-            even underrepresented views exhibit coherent geometry. Geometric moments define various
-            shape characteristics and can be visualized as projections of the image onto chosen basis
-            functions. The DGM is inspired by traditional moment calculations, with the significant difference that its basis functions are learned end-to-end through deep learning.</p>
-        </div>
-      </div>
-    </div>
-    <!--/ method. -->
+		<section class="section">
+				<!-- Results -->
+				<div class="columns is-centered has-text-centered">
+					<div class="column is-four-fifths">
+						<h2 class="title is-3">Results</h2>
+						<div class="content has-text-justified">
+						</div>
+					</div>
+				</div>
+				<!-- /Results -->
+		</section>
+		<section class="hero teaser">
+			<div class="container is-max-desktop">
+				<div class="hero-body">
+					<div class="gif-gallery">
+						<figure>
+							<img src="./static/project_page/6f09fdd4-6ce9-43b8-a141-da7efef0c6f5-ezgif.com-crop.gif" alt="GIF 1">
+							<figcaption>A high quality photo of a corgi</figcaption>
+						</figure>
+						<figure>
+							<img src="./static/project_page/69b118fe-7114-4c45-a83b-6eb3277d3f76-ezgif.com-crop.gif" alt="GIF 2">
+							<figcaption>A delicious hamburger</figcaption>
+						</figure>
+						<figure>
+							<img src="./static/project_page/c97a9385-c5b4-4c65-a7fc-9136a610425c-ezgif.com-crop.gif" alt="GIF 3">
+							<figcaption>A high quality photo of a corgi wearing a top hat</figcaption>
+						</figure>
+						<figure>
+							<img src="./static/project_page/e65740b1-60cc-4ec5-868e-8f5b04692c7d-ezgif.com-crop.gif" alt="GIF 4">
+							<figcaption>A high quality photo of an ostrich</figcaption>
+						</figure>
+						<figure>
+							<img src="./static/project_page/eval_spiral_14500_20c890b598c7da6eb563.gif" alt="GIF 5">
+							<figcaption>A high quality photo of a furry dog</figcaption>
+						</figure>
+						<figure>
+							<img src="./static/project_page/eval_spiral_14500_35c8231eb52f65fea055-ezgif.com-crop.gif" alt="GIF 6">
+							<figcaption>A ripe strawberry</figcaption>
+						</figure>
+						<figure>
+							<img src="./static/project_page/eval_spiral_14500_595dbf5ee1aa5e72363b-ezgif.com-crop.gif" alt="GIF 7">
+							<figcaption>A DSLR photo of Batman</figcaption>
+						</figure>
+						<figure>
+							<img src="./static/project_page/eval_spiral_14500_a84dd6aef71d99883400.gif" alt="GIF 8">
+							<figcaption>A high quality photo of a vase with sunflowers</figcaption>
+						</figure>
+						<figure>
+							<img src="./static/project_page/eval_spiral_14500_b6d8871aaa6cccad8d40-ezgif.com-crop.gif" alt="GIF 9">
+							<figcaption>A DSLR photo of a pineapple</figcaption>
+						</figure>
+						<figure>
+							<img src="./static/project_page/f6a01576-bd47-4c3a-9414-f461cce5f3b8-ezgif.com-crop.gif" alt="GIF 10">
+							<figcaption>A DSLR photo of a ceramic lion</figcaption>
+						</figure>
+						<figure>
+							<img src="./static/project_page/mt_parrot.gif" alt="GIF 11">
+							<figcaption>A high quality photo of a parrot</figcaption>
+						</figure>
+						<figure>
+							<img src="./static/project_page/eval_spiral_14500_20c890b598c7da6eb563-ezgif.com-crop.gif" alt="GIF 12">
+							<figcaption>A high quality photo of a wooden buddha head</figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
+		</section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!--results. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Results</h2>
-        <div class="content has-text-justified">
-          <section class="hero teaser">
-            <div class="container is-max-desktop">
-              <div class="hero-body">
-                <div class="gif-gallery">
-                  <img src="./static/project_page/6f09fdd4-6ce9-43b8-a141-da7efef0c6f5-ezgif.com-crop.gif" alt="GIF 1">
-                  <img src="./static/project_page/69b118fe-7114-4c45-a83b-6eb3277d3f76-ezgif.com-crop.gif" alt="GIF 2">
-                  <img src="./static/project_page/c97a9385-c5b4-4c65-a7fc-9136a610425c-ezgif.com-crop.gif" alt="GIF 3">
-                  <img src="./static/project_page/e65740b1-60cc-4ec5-868e-8f5b04692c7d-ezgif.com-crop.gif" alt="GIF 4">
-                  <img src="./static/project_page/eval_spiral_14500_20c890b598c7da6eb563.gif" alt="GIF 5">
-                  <img src="./static/project_page/eval_spiral_14500_35c8231eb52f65fea055-ezgif.com-crop.gif" alt="GIF 6">
-                  <img src="./static/project_page/eval_spiral_14500_595dbf5ee1aa5e72363b-ezgif.com-crop.gif" alt="GIF 7">
-                  <img src="./static\project_page\eval_spiral_14500_a84dd6aef71d99883400.gif" alt="GIF 8">
-                  <img src="./static\project_page\eval_spiral_14500_b6d8871aaa6cccad8d40-ezgif.com-crop.gif" alt="GIF 9">
-                  <img src="./static/project_page/f6a01576-bd47-4c3a-9414-f461cce5f3b8-ezgif.com-crop.gif" alt="GIF 10">
-                  <img src="./static/project_page/mt_parrot.gif" alt="GIF 11">
-                  <img src="./static/project_page\eval_spiral_14500_20c890b598c7da6eb563-ezgif.com-crop.gif" alt="GIF 11">
-                </div>
-              </div>
-            </div>
-          </section>
-          
-        </div>
-      </div>
-    </div>
-    <!--/ results. -->
+		<style>
+			.gif-gallery {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
+				gap: 15px; /* Space between images */
+				justify-items: center; /* Center images horizontally */
+				align-items: center; /* Center images vertically */
+			}
 
+			 .gif-gallery figure {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				max-width: 3300px; /* Adjust image container width */
+			} */
 
+			.gif-gallery img {
+				max-width: 100%; /* Ensure the images do not exceed the container's width */
+				height: auto; /* Maintain aspect ratio */
+				border: 2px solid #ddd; /* Add a subtle border */
+				border-radius: 5px; /* Rounded corners */
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
+			}
 
-
+			.gif-gallery figcaption {
+				margin-top: 10px;
+				font-size: 16px;
+				color: #555;
+				text-align: center;
+				font-style: italic;
+			}
+		</style>
 
 <section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@inproceedings{nath2024deep,
-      title={Deep Geometric Moments Promote Shape Consistency in Text-to-3D Generation},
-      author={Nath, Utkarsh and Goel, Rajeev and Jeon, Eun Som and Kim, Changhoon and Min, Kyle and Yang, Yezhou and Yang, Yingzhen and Turaga, Pavan},
-      journal={arXiv preprint arXiv:2408.05938},
-      year={2024}
-    }</code></pre>
-  </div>
+	<div class="container is-max-desktop content">
+		<h2 class="title" style="text-align: center;">BibTeX</h2>
+		<pre style="background-color: #f7f7f7; padding: 15px; border-radius: 5px; font-size: 14px; line-height: 1.5; overflow-x: auto; border: 1px solid #ddd;">
+			<code>
+@inproceedings{nath2024deep,
+  title={Deep Geometric Moments Promote Shape Consistency in Text-to-3D Generation},
+  author={Nath, Utkarsh and Goel, Rajeev and Jeon, Eun Som and Kim, Changhoon and Min, Kyle and Yang, Yezhou and Yang, Yingzhen and Turaga, Pavan},
+  journal={arXiv preprint arXiv:2408.05938},
+  year={2024}
+}
+			</code>
+		</pre>
+	</div>
 </section>
 
+
 <footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="container">
+		<div class="content has-text-centered">
+			<a class="icon-link"
+				 href="./static/videos/nerfies_paper.pdf">
+				<i class="fas fa-file-pdf"></i>
+			</a>
+			<a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+				<i class="fab fa-github"></i>
+			</a>
+		</div>
+		<div class="columns is-centered">
+			<div class="column is-8">
+				<div class="content">
+					<p>
+						This website is licensed under a <a rel="license"
+																								href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+						Commons Attribution-ShareAlike 4.0 International License</a>.
+					</p>
+					<p>
+						This means you are free to borrow the <a
+							href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+						we just ask that you link back to this page in the footer.
+						Please remember to remove the analytics code included in the header of the website which
+						you do not want on your website.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </footer>
 
 </body>
